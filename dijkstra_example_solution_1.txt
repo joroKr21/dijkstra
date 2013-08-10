@@ -1,0 +1,6 @@
+Shortest path to node A has length 0 (predecessor node is: A)
+Shortest path to node B has length 1 (predecessor node is: A)
+Shortest path to node C has length 3 (predecessor node is: E)
+Shortest path to node D has length 3 (predecessor node is: E)
+Shortest path to node E has length 2 (predecessor node is: B)
+Shortest path to node F has length 5 (predecessor node is: C)

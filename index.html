@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Dijkstra</title>
+        <script type="application/javascript" src="js/jquery-1.7.2.js"></script>
+        <script type="application/javascript" src="js/dijkstra.js"></script>
+        <script type="application/javascript" src="js/solve.js"></script>
+        <style type="text/css">
+            body{text-align:center}
+            #graph{width:600px}
+            #result{display:inline-block;text-align:left}
+        </style>
+    </head>
+    <body>
+        <section>
+            <h1>The Dijkstra Shortest Path Algorithm</h1>
+            <article id="example">
+                <h3>Example Adjacency Matrix</h3>
+                { {0, 1, 0, 4, 0, 0},
+                {1, 0, 3, 0, 1, 0},
+                {0, 3, 0, 0, 1, 2},
+                {4, 0, 0, 0, 1, 0},
+                {0, 1, 1, 1, 0, 4},
+                {0, 0, 2, 0, 4, 0} }
+            </article>
+            <form id="generate" name="generate" method="GET" action="generator.php" target="_blank">
+                <h3>Generate Random Graph</h3>
+                <label for="min">Min: </label>
+                <input type="number" id="min" name="min" min="1" value="1"/>
+                <label for="max">Max: </label>
+                <input type="number" id="max" name="max" min="1" value="100"/>
+                <br/><label for="size">Size: </label>
+                <input type="number" id="size" name="size" min="1" max="1000" value="100"/>
+                <label for="dens">Density: </label>
+                <input type="range" id="dens" name="dens" min="0" max="100" step="1" value="50"/>
+                <input type="submit" id="gen" name="gen" value="Generate"/>
+            </form><br/>
+            <textarea form="dijkstra" id="graph" name="graph" rows="10"
+                      required="required" placeholder="Enter adjacency matrix..."></textarea>
+            <br/>
+            <form id="dijkstra" name="dijkstra">
+                <label for="node">Choose starting node: </label>
+                <input type="number" id="node" name="node" min="1" value="1"/>
+                <input type="submit" id="go" name="go" value="Go"/>
+                <input type="file" id="file" name="file" accept="text/*"/>
+            </form><br/>
+            <article id="result"></article>
+        </section>
+    </body>
+</html>
